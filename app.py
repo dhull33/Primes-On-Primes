@@ -1,12 +1,18 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from config import DevelopmentConfig
+
 
 app = Flask(__name__)
+app.config.from_object(DevelopmentConfig)
+
+db = SQLAlchemy(app)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return 'Hello World!'
+    return "Hello World!"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()

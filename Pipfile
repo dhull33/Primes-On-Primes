@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 python-dotenv = "*"
 psycopg2 = "*"
+mpmath = "*"
 
 [requires]
 python_version = "3.8"
